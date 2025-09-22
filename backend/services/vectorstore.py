@@ -2,7 +2,7 @@
 from typing import List, Dict, Iterable
 from pinecone import Pinecone, ServerlessSpec
 
-_INDEX = os.getenv("PINECONE_INDEX", "caffinate-rag-768")
+_INDEX = os.getenv("PINECONE_INDEX", "caffeinate-rag-768")
 _CLOUD = os.getenv("PINECONE_CLOUD", "aws")
 _REGION = os.getenv("PINECONE_REGION", "us-east-1")
 
@@ -31,3 +31,4 @@ def query_vectors(vector: List[float], top_k: int = 8, filter: Dict | None = Non
     pc = get_pc()
     index = pc.Index(_INDEX)
     return index.query(vector=vector, top_k=top_k, include_metadata=True, filter=filter)
+

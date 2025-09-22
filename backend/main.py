@@ -28,11 +28,11 @@ app.add_middleware(
 TENANT = os.getenv("TENANT_ID", "demo")
 
 def db_url() -> str:
-    user = os.getenv("POSTGRES_USER", "caffinate")
-    pwd  = os.getenv("POSTGRES_PASSWORD", "caffinate123")
+    user = os.getenv("POSTGRES_USER", "caffeinate")
+    pwd  = os.getenv("POSTGRES_PASSWORD", "caffeinate123")
     host = os.getenv("POSTGRES_HOST", "postgres")
     port = os.getenv("POSTGRES_PORT", "5432")
-    db   = os.getenv("POSTGRES_DB", "caffinate")
+    db   = os.getenv("POSTGRES_DB", "caffeinate")
     return f"postgresql+psycopg://{user}:{pwd}@{host}:{port}/{db}"
 
 def get_engine():
@@ -128,3 +128,4 @@ def rag_index(table: str = Query(...), limit: Optional[int] = Query(None), _=Dep
         return index_table(table=physical, limit=limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+

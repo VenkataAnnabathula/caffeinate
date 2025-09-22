@@ -10,11 +10,11 @@ from sqlalchemy import create_engine, text
 DIM = 768  # text-embedding-004
 
 def _db_url() -> str:
-    user = os.getenv("POSTGRES_USER", "caffinate")
-    pwd  = os.getenv("POSTGRES_PASSWORD", "caffinate123")
+    user = os.getenv("POSTGRES_USER", "caffeinate")
+    pwd  = os.getenv("POSTGRES_PASSWORD", "caffeinate123")
     host = os.getenv("POSTGRES_HOST", "postgres")
     port = os.getenv("POSTGRES_PORT", "5432")
-    db   = os.getenv("POSTGRES_DB", "caffinate")
+    db   = os.getenv("POSTGRES_DB", "caffeinate")
     return f"postgresql+psycopg://{user}:{pwd}@{host}:{port}/{db}"
 
 def load_df(table: str, limit: int | None = None) -> pd.DataFrame:
@@ -109,3 +109,4 @@ def index_table(table: str, limit: int | None = None) -> Dict:
         upsert_vectors(items[s:s+B])
 
     return {"table": table, "rows_indexed": len(items), "dim": len(vectors[0]) if vectors else DIM}
+
