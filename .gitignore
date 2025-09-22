@@ -1,0 +1,32 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Env / secrets
+.env
+.env.*
+*.env
+
+# Streamlit
+.streamlit/
+
+# Node (future-proof)
+node_modules/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Data files (you can commit samples later if you want)
+data/
+*.csv
+*.parquet
+*.xlsx
+*.tsv
+*.jsonl
+
+# Logs / dumps
+*.log

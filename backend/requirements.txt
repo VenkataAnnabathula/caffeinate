@@ -1,0 +1,19 @@
+﻿fastapi
+uvicorn[standard]
+psycopg[binary]
+python-dotenv
+pandas
+SQLAlchemy>=2.0
+python-multipart
+
+# LangChain + integrations
+langchain>=0.2
+langchain-community>=0.2
+langchain-pinecone>=0.1.3
+langchain-google-genai>=1.0.3
+
+# Gemini + Pinecone SDKs
+google-generativeai>=0.7.2
+pinecone-client>=3.0.0
+
+pydantic>=2
