@@ -5,8 +5,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(page_title="Caffinate", layout="wide")
-st.title("Caffinate — Analytics + RAG Assistant (MVP)")
+st.set_page_config(page_title="caffeinate", layout="wide")
+st.title("caffeinate — Analytics + RAG Assistant (MVP)")
 
 # Sidebar settings (runs INSIDE Docker)
 DEFAULT_BACKEND = os.getenv("BACKEND_URL", "http://backend:8000")
@@ -130,3 +130,4 @@ with tab_ask:
                 st.json(resp)
         else:
             st.json(resp)
+

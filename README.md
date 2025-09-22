@@ -1,4 +1,4 @@
-﻿# ☕ Caffinate
+﻿# ☕ caffeinate
 
 AI-powered **RAG Analytics Dashboard** (professional MVP)
 
@@ -18,3 +18,4 @@ Infra: Docker, Kubernetes, Terraform
 
 ## Goal
 Enable SMBs to upload data, see dashboards, and ask NL questions answered via RAG over structured data → SQL → results.
+
